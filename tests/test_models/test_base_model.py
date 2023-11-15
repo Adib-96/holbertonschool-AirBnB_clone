@@ -7,6 +7,7 @@ BaseModel = base_model.BaseModel
 
 class TestBaseModel(unittest.TestCase):
     """Test the baseModel class"""
+
     def test_instantiation(self):
         """Check if the Object is correctly instantiated"""
         obj = BaseModel()
