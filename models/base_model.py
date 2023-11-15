@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 class BaseModel:
-    """Base class for models that represent objects"""
+    """this is the class BaseModel"""
 
     def __init__(self):
         """Constructor function"""
@@ -16,17 +16,19 @@ class BaseModel:
         self.updated_at = datetime.now()
 
     def __str__(self):
-        """String representation of the BaseModel class"""
-        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
+        """return string representation"""
+        return "[{}] ({}) {}".format(
+            self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
         """Update the public instance attribute with the current datetime"""
         self.updated_at = datetime.now()
 
     def to_dict(self):
-        """returns the __dict__ representation of an instance"""
+        """ returns a dictionary containing all
+        keys/values of __dict__ of the instance"""
         new_dict = self.__dict__.copy()
         new_dict["__class__"] = self.__class__.__name__
-        new_dict['created_at'] = self.created_at.isoformat()
-        new_dict['updated_at'] = self.updated_at.isoformat()
+        new_dict["created_at"] = self.created_at.isoformat()
+        new_dict["updated_at"] = self.updated_at.isoformat()
         return new_dict
