@@ -11,7 +11,7 @@ class TestBaseModel(unittest.TestCase):
         """Check if the Object is correctly instantiated"""
         obj = BaseModel()
         self.assertIs(type(obj), BaseModel)
-    
+
     def test_module_docstring(self):
         """Test for module docstring"""
         self.assertIsNot(mod_doc, None, "base_model.py needs a docstring")
