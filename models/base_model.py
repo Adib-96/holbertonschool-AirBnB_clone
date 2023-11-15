@@ -8,6 +8,7 @@ from datetime import datetime
 
 class BaseModel:
     """Base class for models that represent objects"""
+
     def __init__(self):
         """Constructor function"""
         self.id = str(uuid.uuid4())
