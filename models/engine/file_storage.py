@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-from models.base_model import BaseModel
-import json
-import datetime
 """
 Modules that define a class for storing objects
 """
+from models.base_model import BaseModel
+import json
+import datetime
 
 
 class FileStorage():
